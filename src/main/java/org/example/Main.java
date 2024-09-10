@@ -9,7 +9,10 @@ public class Main {
      * Method signature: circleArea(int)
      * Returns the area of a circle. */
     public static double circleArea(int radius) {
-        return 0;
+        double a = radius * radius * Math.PI;
+        double b = a * 100;
+        double c = (double) Math.round(b);
+        return c/100;
     }
 
     /** Method 2
@@ -19,7 +22,10 @@ public class Main {
      * Method signature: circleCircum(int)
      * Returns the circumference of a circle. */
     public static double circleCircum(int radius) {
-        return 0;
+        double a = 2 * radius * Math.PI;
+        double b = a * 100;
+        double c = (double) Math.round(b);
+        return c/100;
     }
 
     /** Method 3
@@ -33,7 +39,8 @@ public class Main {
      * Circumference: 18.85
      * Area: 28.27 */
     public static String circleInfo(int radius) {
-        return null;
+        return "Radius: " + radius + "\nCircumference: " + circleCircum(radius) + "\nArea: " + circleArea(radius);
+
     }
 
     /** Method 4
@@ -45,7 +52,10 @@ public class Main {
      * Format of returned String: e.g. 3 hours and 46 minutes */
     public static String minutesToHoursMinutes(int minutes) {
 
-        return null;
+        int a = minutes/60;
+        int b = minutes - (a*60);
+
+        return a + " hours and " + b + " minutes" ;
     }
 
     /** Method 5
@@ -57,8 +67,10 @@ public class Main {
      * Format of returned String: e.g. 3:56 pm
      * */
     public static String twentyFourToTwelve(String time) {
+        int a = Integer.parseInt(time.substring(0,2)) - 12;
+        int b = Integer.parseInt(time.substring(3));
 
-        return null;
+        return  a + ":" + b + " pm";
 
     }
 
@@ -69,8 +81,10 @@ public class Main {
      * Method signature: distanceBetweenTwoPoints(int,int,int,int)
      * Returns the distance between two points */
     public static double distanceBetweenTwoPoints(int x1, int y1, int x2, int y2) {
-
-        return 0;
+        double xd = Math.pow((Math.pow((x1-x2),2))+(Math.pow((y1-y2),2)), 0.5);
+        double b = xd * 100;
+        double c = (double) Math.round(b);
+        return c/100;
 
     }
 
@@ -82,8 +96,11 @@ public class Main {
      * Returns the degrees celsius equivalent of the degrees in fahrenheit */
     public static double fahrenheitToCelsius(int fahrenheit) {
 
-        return 0;
-
+        double thing = (double)(fahrenheit-32) * 5/9;
+        double b = thing * 100;
+        double c = (double) Math.round(b);
+        return c/100;
+//(32°F − 32) × 5/9 = 0°C
     }
 
     /** Method 8
@@ -93,9 +110,11 @@ public class Main {
      * Method signature: celsiusToFahrenheit(int)
      * Returns the degrees fahrenheit equivalent of the degrees in celsius */
     public static double celsiusToFahrenheit(int celsius) {
-
-        return 0;
-
+        double thing = (double)celsius *9/5 + 32;
+        double b = thing * 100;
+        double c = (double) Math.round(b);
+        return thing;
+//(0°C × 9/5) + 32 = 32°F
     }
 
 }
